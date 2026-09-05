@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="d1or development crea páginas web pensadas para negocios que quieren crecer." />
+    <title>d1or development - Páginas web que trabajan por su negocio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+    <style>
+      :root { --ink:#0d0d0d; --paper:#f7f7f4; --line:#bdbdb8; --muted:#676763; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; color:var(--ink); background:var(--paper); font-family:Manrope,Arial,sans-serif; }
+      a { color:inherit; text-decoration:none; }
+      .wrap { width:min(1400px,100%); margin:auto; padding:0 34px; }
+      .eyebrow { font:500 11px/1.3 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
+      nav { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--ink); min-height:72px; }
+      .brand { font-size:16px; font-weight:800; letter-spacing:-.06em; }
+      .brand b { font-family:'Playfair Display',serif; font-size:21px; font-style:italic; }
+      .nav-links { display:flex; gap:22px; font:500 11px 'DM Mono',monospace; text-transform:uppercase; }
+      .hero { min-height:calc(100vh - 72px); display:grid; grid-template-columns:1fr 255px; align-items:end; gap:20px; padding:72px 0 36px; }
+      .hero h1 { max-width:1050px; margin:26px 0 38px; font-size:clamp(3.3rem,8.25vw,8.7rem); line-height:.88; letter-spacing:-.085em; font-weight:800; }
+      .hero h1 em { font-family:'Playfair Display',serif; font-weight:500; letter-spacing:-.07em; }
+      .hero-copy { max-width:440px; margin:0; font-size:17px; line-height:1.55; }
+      .hero-copy strong { font-weight:800; }
+      .hero-aside { border-left:1px solid var(--ink); padding:0 0 5px 20px; font:400 12px/1.6 'DM Mono',monospace; }
+      .hero-aside span { display:block; margin-top:22px; color:var(--muted); }
+      .button { display:inline-flex; align-items:center; justify-content:center; gap:14px; margin-top:28px; padding:16px 20px; background:var(--ink); color:var(--paper); font:500 12px 'DM Mono',monospace; text-transform:uppercase; transition:transform .2s ease, background .2s ease; }
+      .button:hover { transform:translate(-3px,-3px); box-shadow:3px 3px 0 var(--line); }
+      .marquee { overflow:hidden; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); white-space:nowrap; }
+      .marquee div { padding:15px 0; font:500 12px 'DM Mono',monospace; word-spacing:13px; text-transform:uppercase; }
+      section { padding:115px 0; border-bottom:1px solid var(--ink); }
+      .section-head { display:grid; grid-template-columns:1fr 3fr; gap:30px; margin-bottom:54px; }
+      h2 { margin:0; max-width:760px; font-size:clamp(2.4rem,5vw,5.6rem); line-height:.93; letter-spacing:-.075em; }
+      .services { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--ink); }
+      .service { min-height:295px; padding:20px 24px 25px 0; border-right:1px solid var(--ink); display:flex; flex-direction:column; }
+      .service + .service { padding-left:24px; }
+      .service:last-child { border-right:0; }
+      .number { color:var(--muted); font:400 11px 'DM Mono',monospace; }
+      .service h3 { font-size:25px; letter-spacing:-.06em; margin:auto 0 14px; }
+      .service p { margin:0; max-width:300px; color:#3f3f3c; font-size:14px; line-height:1.55; }
+      .sectors { background:var(--ink); color:var(--paper); }
+      .sectors .section-head { border-bottom:1px solid #777; padding-bottom:54px; }
+      .sector-list { display:grid; grid-template-columns:repeat(3,1fr); gap:0; }
+      .sector { font-size:clamp(1.65rem,3vw,3.6rem); letter-spacing:-.07em; padding:15px 18px 17px 0; border-bottom:1px solid #777; }
+      .sector:nth-child(3n+2),.sector:nth-child(3n+3) { padding-left:18px; border-left:1px solid #777; }
+      .pricing { display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--ink); }
+      .plan { padding:24px; min-height:410px; border-right:1px solid var(--ink); display:flex; flex-direction:column; }
+      .plan:first-child { padding-left:0; }
+      .plan:last-child { border-right:0; }
+      .plan h3 { font-size:29px; margin:58px 0 5px; letter-spacing:-.07em; }
+      .plan .price { font:500 13px 'DM Mono',monospace; }
+      .plan ul { list-style:none; padding:0; margin:27px 0; font-size:13px; line-height:2; }
+      .plan li::before { content:'— '; }
+      .plan a { margin-top:auto; font:500 11px 'DM Mono',monospace; text-decoration:underline; text-underline-offset:5px; text-transform:uppercase; }
+      .about { display:grid; grid-template-columns:1.12fr 1fr; gap:8vw; align-items:start; }
+      .about p { margin:0; font-size:clamp(1.65rem,3vw,3.1rem); line-height:1.06; letter-spacing:-.065em; }
+      .about .bio { border-left:1px solid var(--ink); padding-left:24px; font-size:15px; line-height:1.65; letter-spacing:normal; }
+      .contact { padding:95px 0 42px; }
+      .contact h2 { max-width:1100px; font-size:clamp(3.2rem,8vw,8.8rem); }
+      .contact h2 em { font-family:'Playfair Display',serif; font-weight:500; }
+      .work-list { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--ink); }
+      .work { min-height:220px; padding:24px 24px 25px 0; border-right:1px solid var(--ink); display:flex; flex-direction:column; }
+      .work + .work { padding-left:24px; }
+      .work:last-child { border-right:0; }
+      .work-top { display:flex; align-items:baseline; justify-content:space-between; gap:14px; }
+      .work-name { font-size:25px; letter-spacing:-.06em; font-family:'Playfair Display',serif; font-style:italic; font-weight:500; }
+      .work-status { font:500 10px 'DM Mono',monospace; text-transform:uppercase; color:var(--muted); white-space:nowrap; }
+      .work p { margin:14px 0 auto; max-width:320px; color:#3f3f3c; font-size:14px; line-height:1.55; }
+      .work a { margin-top:20px; font:500 11px 'DM Mono',monospace; text-decoration:underline; text-underline-offset:5px; text-transform:uppercase; }
+      .work.soon { align-items:center; justify-content:center; text-align:center; color:var(--muted); font:400 13px/1.5 'DM Mono',monospace; }
+      .contact-bottom { border-top:1px solid var(--ink); margin-top:72px; padding-top:18px; display:flex; justify-content:space-between; gap:22px; font:400 11px 'DM Mono',monospace; text-transform:uppercase; }
+      .disclaimer { display:block; max-width:520px; margin-top:22px; color:var(--muted); font:400 11px/1.6 'DM Mono',monospace; text-transform:none; }
+      .whatsapp { text-decoration:underline; text-underline-offset:5px; }
+      @media (max-width:720px) { .wrap { padding:0 19px; } .nav-links { display:none; } .hero { min-height:690px; grid-template-columns:1fr; padding:55px 0 25px; } .hero h1 { margin:18px 0 28px; } .hero-aside { border-left:0; border-top:1px solid var(--ink); padding:13px 0 0; display:flex; justify-content:space-between; gap:10px; } .hero-aside span { margin:0; text-align:right; } section { padding:72px 0; } .section-head { grid-template-columns:1fr; gap:17px; margin-bottom:34px; } .services,.pricing,.sector-list,.about,.work-list { grid-template-columns:1fr; } .service,.service + .service,.plan,.plan:first-child,.work,.work + .work { min-height:auto; padding:20px 0; border-right:0; border-bottom:1px solid var(--ink); } .service:last-child,.plan:last-child,.work:last-child { border-bottom:0; } .sector,.sector:nth-child(3n+2),.sector:nth-child(3n+3) { padding:16px 0; border-left:0; } .about { gap:40px; } .about .bio { padding-left:0; padding-top:22px; border-left:0; border-top:1px solid var(--ink); } .contact-bottom { margin-top:45px; flex-direction:column; } }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <nav aria-label="Navegación principal"><a class="brand" href="#inicio"><b>d1or</b> development</a><div class="nav-links"><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#precios">Precios</a><a href="#benjamin">Benjamín</a><a href="#contacto">Contacto</a></div></nav>
+      <section class="hero" id="inicio">
+        <div><p class="eyebrow">Diseño + desarrollo web / Chile</p><h1>Tu negocio merece una web que <em>mueva</em> gente.</h1><p class="hero-copy">Diseño y desarrollo experiencias web rápidas y elegantes para <strong>marcas que quieren verse tan bien como trabajan.</strong> La hacemos primero: si te gusta, la pagas.</p><a class="button" href="#contacto">Conversemos <span>↗</span></a></div>
+        <aside class="hero-aside">Una presencia digital clara,<br />útil y con carácter.<span>Entrega máxima<br />2 días</span></aside>
+      </section>
+    </main>
+    <div class="marquee" aria-hidden="true"><div>BARBERÍAS - RESTAURANTS - TIENDAS DE ROPA - STARTUPS - AGENCIAS - NEGOCIOS LOCALES -</div></div>
+    <section id="servicios"><div class="wrap"><div class="section-head"><p class="eyebrow">Lo que hago / 01</p><h2>No necesitas “una página”. Necesitas una razón para que te elijan.</h2></div><div class="services"><article class="service"><span class="number">01</span><h3>Landing de conversión</h3><p>Una página enfocada en presentar tu propuesta y transformar visitas en mensajes, reservas o cotizaciones.</p></article><article class="service"><span class="number">02</span><h3>Web para negocios</h3><p>Un sitio con identidad propia para mostrar servicios, carta, horarios, ubicación y todo lo que tus clientes buscan.</p></article><article class="service"><span class="number">03</span><h3>Catálogo digital</h3><p>Una vitrina ágil para moda, productos y colecciones, preparada para dar el siguiente paso hacia una tienda online.</p></article></div></div></section>
+    <section class="sectors"><div class="wrap"><div class="section-head"><p class="eyebrow">Para quién / 02</p><h2>Pienso en la pantalla como piensa tu cliente: rápido, visual y sin rodeos.</h2></div><div class="sector-list"><div class="sector">Barberías</div><div class="sector">Restaurants</div><div class="sector">Tiendas de ropa</div><div class="sector">Startups</div><div class="sector">Agencias</div><div class="sector">Negocios locales</div></div></div></section>
+    <section id="trabajos"><div class="wrap"><div class="section-head"><p class="eyebrow">Trabajos recientes / 03</p><h2>Negocios reales que ya están vendiendo con su web.</h2></div><div class="work-list"><article class="work"><div class="work-top"><span class="work-name">STYLEVIP.CL</span><span class="work-status">Completado</span></div><p>Tienda online de polerones con catálogo propio, categorías de entrega inmediata y por encargo, y panel administrador para subir productos sin depender de terceros.</p><a href="http://vipstylecl.ct.ws/">Ver el proceso ↗</a></article><article class="work soon">Tu negocio podría estar aquí.</article></div></div></section>
+    <section id="precios"><div class="wrap"><div class="section-head"><p class="eyebrow">Una tarifa / 04</p><h2>Una web completa. Un precio honesto.</h2></div><div class="pricing"><article class="plan"><span class="eyebrow">Web completa / tarifa fija</span><h3>Tu web, lista para vender.</h3><span class="price">$20.000 CLP</span><ul><li>Diseño y desarrollo completo</li><li>Adaptada a celulares</li><li>Servicios, carta o catálogo</li><li>Botón de WhatsApp y contacto</li><li>Entrega máxima en 2 días</li></ul><a href="#contacto">Quiero mi página ↗</a></article><article class="plan"><span class="eyebrow">Cómo funciona</span><h3>Primero la ves. Después decides.</h3><span class="price">Sin compromiso inicial</span><ul><li>Me cuentas tu negocio</li><li>Construimos tu página completa</li><li>La revisas con calma</li><li>Si te gusta, la pagas</li></ul><a href="#contacto">Hablemos por WhatsApp ↗</a></article><article class="plan"><span class="eyebrow">Proceso propio</span><h3>Rápido, sin sacrificar intención.</h3><span class="price">Procesos automatizados</span><ul><li>Flujo de trabajo optimizado</li><li>Diseño pensado para tu rubro</li><li>Comunicación directa</li><li>Una presencia lista para usar</li></ul><a href="#contacto">Empezar ahora ↗</a></article></div></div></section>
+    <section id="benjamin"><div class="wrap about"><div><p class="eyebrow" style="margin:0 0 28px">Sobre el dueño / 05</p><p>Hola, soy <em style="font-family:'Playfair Display',serif;font-weight:500">Benjamín</em>. Creo sitios con intención, no páginas de relleno.</p></div><p class="bio">Detrás de d1or development estoy yo. Trabajo de cerca con cada negocio para entender lo que lo hace diferente y convertirlo en una presencia digital simple, memorable y fácil de usar. La meta no es que tu sitio se vea “bonito”: es que dé confianza antes de la primera conversación.</p></div></section>
+    <footer class="wrap contact" id="contacto"><p class="eyebrow">Contacto / 06</p><h2>¿Tu negocio está listo para verse <em>en serio?</em></h2><a class="button" href="https://wa.me/56946528115?text=Hola%20Benjam%C3%ADn%2C%20quiero%20mi%20p%C3%A1gina%20web." target="_blank" rel="noopener">Escríbeme por WhatsApp <span>↗</span></a><div class="contact-bottom"><span>© 2026 d1or development</span><a class="whatsapp" href="https://wa.me/56946528115" target="_blank" rel="noopener">WhatsApp / +56 9 4652 8115</a><a class="whatsapp" href="https://instagram.com/11d1or" target="_blank" rel="noopener">Instagram / @11d1or</a><span>Diseñado y desarrollado por Benjamín</span></div></footer>
+  </body>
+</html>
