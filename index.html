@@ -297,6 +297,79 @@
                 text-transform: uppercase;
             }
 
+            /* ---------- FAQ ---------- */
+            .faq-list {
+                border-top: 1px solid var(--ink);
+            }
+
+            .faq-item {
+                display: grid;
+                grid-template-columns: 1fr 1.1fr;
+                gap: 8vw;
+                align-items: start;
+                padding: 34px 0 38px;
+                border-bottom: 1px solid var(--ink);
+            }
+
+            .faq-item:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .faq-q {
+                display: grid;
+                grid-template-columns: 54px 1fr;
+                gap: 10px;
+            }
+
+            .faq-q .number {
+                padding-top: 8px;
+            }
+
+            .faq-q h3 {
+                margin: 0;
+                max-width: 520px;
+                font-size: clamp(1.45rem,2.3vw,2.3rem);
+                line-height: 1.04;
+                letter-spacing: -.065em;
+            }
+
+            .faq-a {
+                color: #3f3f3c;
+                font-size: 15px;
+                line-height: 1.65;
+                max-width: 560px;
+                padding-top: 4px;
+            }
+
+            .faq-a p {
+                margin: 0;
+            }
+
+            .faq-a p + ul {
+                margin-top: 16px;
+            }
+
+            .faq-a ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .faq-a li {
+                padding: 12px 0;
+                border-top: 1px solid var(--line);
+            }
+
+            .faq-a li:last-child {
+                padding-bottom: 0;
+            }
+
+            .faq-a li strong {
+                color: var(--ink);
+                font-weight: 800;
+            }
+
             .about {
                 display: grid;
                 grid-template-columns: 1.12fr 1fr;
@@ -583,6 +656,25 @@
                     border-left: 0;
                 }
 
+                .faq-item {
+                    grid-template-columns: 1fr;
+                    gap: 16px;
+                    padding: 26px 0 28px;
+                }
+
+                .faq-q {
+                    grid-template-columns: 44px 1fr;
+                }
+
+                .faq-q h3 {
+                    font-size: 1.55rem;
+                }
+
+                .faq-a {
+                    padding: 0 0 0 54px;
+                    font-size: 14px;
+                }
+
                 .about {
                     gap: 40px;
                 }
@@ -612,6 +704,7 @@
                     <a href="#servicios">Servicios</a>
                     <a href="#trabajos">Trabajos</a>
                     <a href="#precios">Precios</a>
+                    <a href="#faq">FAQ</a>
                     <a href="#conectores">Conectores</a>
                     <a href="#benjamin">Benjamín</a>
                     <a href="#contacto">Contacto</a>
@@ -751,10 +844,69 @@
                 </div>
             </div>
         </section>
+        <section id="faq">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Preguntas frecuentes / 05</p>
+                    <h2>Dudas claras. Respuestas directas.</h2>
+                </div>
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <div class="faq-q">
+                            <span class="number">01 /</span>
+                            <h3>¿De verdad hacen la página antes de que pague algo?</h3>
+                        </div>
+                        <div class="faq-a">
+                            <p>Sí, tal cual. No te pedimos ningún abono ni compromiso inicial. Me cuentas qué hace tu negocio, construyo la web completa, te muestro cómo quedó y la revisas con calma. Si te convence y cumple lo que buscas, la pagas. Si no, no pasa nada.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <div class="faq-q">
+                            <span class="number">02 /</span>
+                            <h3>¿Qué pasa si hay algo del diseño que no me convence?</h3>
+                        </div>
+                        <div class="faq-a">
+                            <p>Como trabajo directamente contigo y de forma personalizada, hacemos los ajustes necesarios para que el resultado final refleje exactamente la identidad de tu negocio antes de darla por terminada.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <div class="faq-q">
+                            <span class="number">03 /</span>
+                            <h3>¿Cómo funciona el tema del hosting y el dominio?</h3>
+                        </div>
+                        <div class="faq-a">
+                            <p>Tienes dos alternativas según lo prefieras:</p>
+                            <ul>
+                                <li><strong>Con opciones gratuitas (incluido):</strong> Podemos configurar y dejar tu web andando utilizando plataformas gratuitas de alojamiento y servicios (como Render, InfinityFree, o Supabase si tu proyecto necesita base de datos).</li>
+                                <li><strong>Con tu propio dominio:</strong> Nuestro precio cubre exclusivamente la mano de obra y la programación. Si deseas asociarla a un dominio propio, te entregamos el proyecto listo en formato de archivos para que puedas subirlo y configurarlo por tu cuenta en tu servidor.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <div class="faq-q">
+                            <span class="number">04 /</span>
+                            <h3>¿Voy a poder cambiar los precios, fotos o productos yo mismo después?</h3>
+                        </div>
+                        <div class="faq-a">
+                            <p>Dependiendo del tipo de web (como en los catálogos o tiendas), te entrego todo preparado para que puedas gestionar la información de forma simple o consultarme cualquier actualización rápida.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <div class="faq-q">
+                            <span class="number">05 /</span>
+                            <h3>¿Cuánto tarda el proceso completo desde que te escribo?</h3>
+                        </div>
+                        <div class="faq-a">
+                            <p>Desde que definimos los detalles de tu negocio, el plazo de entrega es de máximo 2 días para que tengas tu sitio listo para funcionar.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
         <section class="partners" id="conectores">
             <div class="wrap">
                 <div class="section-head">
-                    <p class="eyebrow">Únete al equipo / 05</p>
+                    <p class="eyebrow">Únete al equipo / 06</p>
                     <h2>Conectores d1or: presenta negocios y gana la mitad de cada web.</h2>
                 </div>
                 <div class="partners-grid">
@@ -802,7 +954,7 @@
         <section id="benjamin">
             <div class="wrap about">
                 <div>
-                    <p class="eyebrow" style="margin:0 0 28px">Sobre el dueño / 06</p>
+                    <p class="eyebrow" style="margin:0 0 28px">Sobre el dueño / 07</p>
                     <p>
                         Hola, soy <em style="font-family:'Playfair Display',serif;font-weight:500">Benjamín</em>
                         . Creo sitios con intención, no páginas de relleno.
@@ -812,7 +964,7 @@
             </div>
         </section>
         <footer class="wrap contact" id="contacto">
-            <p class="eyebrow">Contacto / 07</p>
+            <p class="eyebrow">Contacto / 08</p>
             <h2>
                 ¿Tu negocio está listo para verse <em>en serio?</em>
             </h2>
