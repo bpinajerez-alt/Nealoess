@@ -585,6 +585,94 @@
                 box-shadow: 3px 3px 0 #777;
             }
 
+            /* ---------- Representantes autorizados ---------- */
+            .auth-grid {
+                display: grid;
+                grid-template-columns: 1fr 1.4fr;
+                gap: 8vw;
+                align-items: start;
+            }
+
+            .auth-warning {
+                padding-top: 6px;
+            }
+
+            .auth-warning p {
+                max-width: 360px;
+                margin: 0;
+                font-size: clamp(1.4rem,2.2vw,2.1rem);
+                line-height: 1.12;
+                letter-spacing: -.06em;
+            }
+
+            .auth-warning p + p {
+                margin-top: 22px;
+                max-width: 340px;
+                color: #3f3f3c;
+                font-size: 15px;
+                line-height: 1.6;
+                letter-spacing: normal;
+            }
+
+            .auth-warning strong {
+                font-weight: 800;
+            }
+
+            .auth-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                border-top: 1px solid var(--ink);
+            }
+
+            .auth-item {
+                display: grid;
+                grid-template-columns: 54px 1fr auto;
+                gap: 10px;
+                align-items: baseline;
+                padding: 26px 0 28px;
+                border-bottom: 1px solid var(--ink);
+            }
+
+            .auth-item .number {
+                padding-top: 6px;
+            }
+
+            .auth-handle {
+                font-size: clamp(1.7rem,3.2vw,3.2rem);
+                line-height: 1;
+                letter-spacing: -.07em;
+                font-weight: 800;
+                word-break: break-word;
+            }
+
+            .auth-handle:hover {
+                text-decoration: underline;
+                text-underline-offset: 6px;
+            }
+
+            .auth-role {
+                display: block;
+                margin-top: 10px;
+                color: var(--muted);
+                font: 400 12px 'DM Mono',monospace;
+                text-transform: uppercase;
+            }
+
+            .auth-badge {
+                padding: 6px 10px;
+                border: 1px solid var(--ink);
+                font: 500 10px 'DM Mono',monospace;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+
+            .auth-note {
+                margin: 22px 0 0;
+                color: var(--muted);
+                font: 400 12px/1.6 'DM Mono',monospace;
+            }
+
             @media (max-width: 720px) {
                 .wrap {
                     padding:0 19px;
@@ -656,6 +744,22 @@
                     border-left: 0;
                 }
 
+                .auth-grid {
+                    grid-template-columns: 1fr;
+                    gap: 36px;
+                }
+
+                .auth-item {
+                    grid-template-columns: 44px 1fr;
+                    padding: 22px 0 24px;
+                }
+
+                .auth-badge {
+                    grid-column: 2;
+                    justify-self: start;
+                    margin-top: 4px;
+                }
+
                 .faq-item {
                     grid-template-columns: 1fr;
                     gap: 16px;
@@ -706,6 +810,7 @@
                     <a href="#precios">Precios</a>
                     <a href="#faq">FAQ</a>
                     <a href="#conectores">Conectores</a>
+                    <a href="#autorizados">Autorizados</a>
                     <a href="#benjamin">Benjamín</a>
                     <a href="#contacto">Contacto</a>
                 </div>
@@ -951,10 +1056,45 @@
                 </div>
             </div>
         </section>
+        <section id="autorizados">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Evita las estafas / 07</p>
+                    <h2>Evita las estafas: Representantes Autorizados</h2>
+                </div>
+                <div class="auth-grid">
+                    <div class="auth-warning">
+                        <p>Solo estas personas tienen permiso para hablar con tiendas y ofrecer los servicios de d1or.</p>
+                        <p><strong>Cualquier otra cuenta o persona que lo haga es una estafa.</strong> Si dudas, escríbeme directo por Instagram.</p>
+                    </div>
+                    <div>
+                        <ol class="auth-list">
+                            <li class="auth-item">
+                                <span class="number">01</span>
+                                <div>
+                                    <a class="auth-handle" href="https://instagram.com/11d1or" target="_blank" rel="noopener">@11d1or</a>
+                                    <span class="auth-role">Fundador</span>
+                                </div>
+                                <span class="auth-badge">Autorizado</span>
+                            </li>
+                            <li class="auth-item">
+                                <span class="number">02</span>
+                                <div>
+                                    <a class="auth-handle" href="https://instagram.com/marshisyy" target="_blank" rel="noopener">@marshisyy</a>
+                                    <span class="auth-role">Representante</span>
+                                </div>
+                                <span class="auth-badge">Autorizado</span>
+                            </li>
+                        </ol>
+                        <p class="auth-note">Lista oficial. Si una cuenta no aparece aquí, no representa a d1or.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="benjamin">
             <div class="wrap about">
                 <div>
-                    <p class="eyebrow" style="margin:0 0 28px">Sobre el dueño / 07</p>
+                    <p class="eyebrow" style="margin:0 0 28px">Sobre el dueño / 08</p>
                     <p>
                         Hola, soy <em style="font-family:'Playfair Display',serif;font-weight:500">Benjamín</em>
                         . Creo sitios con intención, no páginas de relleno.
@@ -964,7 +1104,7 @@
             </div>
         </section>
         <footer class="wrap contact" id="contacto">
-            <p class="eyebrow">Contacto / 08</p>
+            <p class="eyebrow">Contacto / 09</p>
             <h2>
                 ¿Tu negocio está listo para verse <em>en serio?</em>
             </h2>
