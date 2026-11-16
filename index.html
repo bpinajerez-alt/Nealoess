@@ -370,28 +370,6 @@
                 font-weight: 800;
             }
 
-            .about {
-                display: grid;
-                grid-template-columns: 1.12fr 1fr;
-                gap: 8vw;
-                align-items: start;
-            }
-
-            .about p {
-                margin: 0;
-                font-size: clamp(1.65rem,3vw,3.1rem);
-                line-height: 1.06;
-                letter-spacing: -.065em;
-            }
-
-            .about .bio {
-                border-left: 1px solid var(--ink);
-                padding-left: 24px;
-                font-size: 15px;
-                line-height: 1.65;
-                letter-spacing: normal;
-            }
-
             .contact {
                 padding: 95px 0 42px;
             }
@@ -404,74 +382,6 @@
             .contact h2 em {
                 font-family: 'Playfair Display',serif;
                 font-weight: 500;
-            }
-
-            .work-list {
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                border-top: 1px solid var(--ink);
-            }
-
-            .work {
-                min-height: 220px;
-                padding: 24px 24px 25px 0;
-                border-right: 1px solid var(--ink);
-                display: flex;
-                flex-direction: column;
-            }
-
-            .work + .work {
-                padding-left: 24px;
-            }
-
-            .work:last-child {
-                border-right: 0;
-            }
-
-            .work-top {
-                display: flex;
-                align-items: baseline;
-                justify-content: space-between;
-                gap: 14px;
-            }
-
-            .work-name {
-                font-size: 25px;
-                letter-spacing: -.06em;
-                font-family: 'Playfair Display',serif;
-                font-style: italic;
-                font-weight: 500;
-            }
-
-            .work-status {
-                font: 500 10px 'DM Mono',monospace;
-                text-transform: uppercase;
-                color: var(--muted);
-                white-space: nowrap;
-            }
-
-            .work p {
-                margin: 14px 0 auto;
-                max-width: 320px;
-                color: #3f3f3c;
-                font-size: 14px;
-                line-height: 1.55;
-            }
-
-            .work a {
-                margin-top: 20px;
-                font: 500 11px 'DM Mono',monospace;
-                text-decoration: underline;
-                text-underline-offset: 5px;
-                text-transform: uppercase;
-            }
-
-            .work.soon {
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                color: var(--muted);
-                font: 400 13px/1.5 'DM Mono',monospace;
             }
 
             .contact-bottom {
@@ -490,8 +400,13 @@
                 max-width: 520px;
                 margin-top: 22px;
                 color: var(--muted);
-                font: 400 11px/1.6 'DM Mono',monospace;
+                font: 400 12px/1.6 'DM Mono',monospace;
                 text-transform: none;
+            }
+
+            .disclaimer strong {
+                color: var(--ink);
+                font-weight: 500;
             }
 
             .contact-link {
@@ -585,94 +500,6 @@
                 box-shadow: 3px 3px 0 #777;
             }
 
-            /* ---------- Representantes autorizados ---------- */
-            .auth-grid {
-                display: grid;
-                grid-template-columns: 1fr 1.4fr;
-                gap: 8vw;
-                align-items: start;
-            }
-
-            .auth-warning {
-                padding-top: 6px;
-            }
-
-            .auth-warning p {
-                max-width: 360px;
-                margin: 0;
-                font-size: clamp(1.4rem,2.2vw,2.1rem);
-                line-height: 1.12;
-                letter-spacing: -.06em;
-            }
-
-            .auth-warning p + p {
-                margin-top: 22px;
-                max-width: 340px;
-                color: #3f3f3c;
-                font-size: 15px;
-                line-height: 1.6;
-                letter-spacing: normal;
-            }
-
-            .auth-warning strong {
-                font-weight: 800;
-            }
-
-            .auth-list {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                border-top: 1px solid var(--ink);
-            }
-
-            .auth-item {
-                display: grid;
-                grid-template-columns: 54px 1fr auto;
-                gap: 10px;
-                align-items: baseline;
-                padding: 26px 0 28px;
-                border-bottom: 1px solid var(--ink);
-            }
-
-            .auth-item .number {
-                padding-top: 6px;
-            }
-
-            .auth-handle {
-                font-size: clamp(1.7rem,3.2vw,3.2rem);
-                line-height: 1;
-                letter-spacing: -.07em;
-                font-weight: 800;
-                word-break: break-word;
-            }
-
-            .auth-handle:hover {
-                text-decoration: underline;
-                text-underline-offset: 6px;
-            }
-
-            .auth-role {
-                display: block;
-                margin-top: 10px;
-                color: var(--muted);
-                font: 400 12px 'DM Mono',monospace;
-                text-transform: uppercase;
-            }
-
-            .auth-badge {
-                padding: 6px 10px;
-                border: 1px solid var(--ink);
-                font: 500 10px 'DM Mono',monospace;
-                text-transform: uppercase;
-                white-space: nowrap;
-            }
-
-            .auth-note {
-                margin: 22px 0 0;
-                color: var(--muted);
-                font: 400 12px/1.6 'DM Mono',monospace;
-            }
-
             @media (max-width: 720px) {
                 .wrap {
                     padding:0 19px;
@@ -716,7 +543,7 @@
                     margin-bottom: 34px;
                 }
 
-                .services,.pricing,.sector-list,.about,.work-list,.partners-grid {
+                .services,.pricing,.sector-list,.partners-grid {
                     grid-template-columns: 1fr;
                 }
 
@@ -728,36 +555,20 @@
                     padding-bottom: 34px;
                 }
 
-                .service,.service + .service,.plan,.plan:first-child,.work,.work + .work {
+                .service,.service + .service,.plan,.plan:first-child {
                     min-height: auto;
                     padding: 20px 0;
                     border-right: 0;
                     border-bottom: 1px solid var(--ink);
                 }
 
-                .service:last-child,.plan:last-child,.work:last-child {
+                .service:last-child,.plan:last-child {
                     border-bottom: 0;
                 }
 
                 .sector,.sector:nth-child(3n+2),.sector:nth-child(3n+3) {
                     padding: 16px 0;
                     border-left: 0;
-                }
-
-                .auth-grid {
-                    grid-template-columns: 1fr;
-                    gap: 36px;
-                }
-
-                .auth-item {
-                    grid-template-columns: 44px 1fr;
-                    padding: 22px 0 24px;
-                }
-
-                .auth-badge {
-                    grid-column: 2;
-                    justify-self: start;
-                    margin-top: 4px;
                 }
 
                 .faq-item {
@@ -779,17 +590,6 @@
                     font-size: 14px;
                 }
 
-                .about {
-                    gap: 40px;
-                }
-
-                .about .bio {
-                    padding-left: 0;
-                    padding-top: 22px;
-                    border-left: 0;
-                    border-top: 1px solid var(--ink);
-                }
-
                 .contact-bottom {
                     margin-top: 45px;
                     flex-direction: column;
@@ -806,12 +606,9 @@
                 </a>
                 <div class="nav-links">
                     <a href="#servicios">Servicios</a>
-                    <a href="#trabajos">Trabajos</a>
                     <a href="#precios">Precios</a>
                     <a href="#faq">FAQ</a>
                     <a href="#conectores">Conectores</a>
-                    <a href="#autorizados">Autorizados</a>
-                    <a href="#benjamin">Benjamín</a>
                     <a href="#contacto">Contacto</a>
                 </div>
             </nav>
@@ -834,7 +631,7 @@
                     Una presencia digital clara,<br/>
                     útil y con carácter.
                     <span>
-                        Entrega máxima<br/>2 días
+                        Entrega máxima<br/>1 semana
                     </span>
                 </aside>
             </section>
@@ -883,29 +680,10 @@
                 </div>
             </div>
         </section>
-        <section id="trabajos">
-            <div class="wrap">
-                <div class="section-head">
-                    <p class="eyebrow">Trabajos recientes / 03</p>
-                    <h2>Negocios reales que ya están vendiendo con su web.</h2>
-                </div>
-                <div class="work-list">
-                    <article class="work">
-                        <div class="work-top">
-                            <span class="work-name">JUAKITO STORE</span>
-                            <span class="work-status">Completado</span>
-                        </div>
-                        <p>Tienda online de zapatillas, ropa y accesorios originales, con catálogo por categorías, pedido en línea y panel administrador para gestionar productos sin depender de terceros.</p>
-                        <a href="https://juakito-store.onrender.com" target="_blank" rel="noopener">Ver la tienda ↗</a>
-                    </article>
-                    <article class="work soon">Tu negocio podría estar aquí.</article>
-                </div>
-            </div>
-        </section>
         <section id="precios">
             <div class="wrap">
                 <div class="section-head">
-                    <p class="eyebrow">Una tarifa / 04</p>
+                    <p class="eyebrow">Una tarifa / 03</p>
                     <h2>Una web completa. Un precio honesto.</h2>
                 </div>
                 <div class="pricing">
@@ -918,7 +696,7 @@
                             <li>Adaptada a celulares</li>
                             <li>Servicios, carta o catálogo</li>
                             <li>Botón de WhatsApp y contacto</li>
-                            <li>Entrega máxima en 2 días</li>
+                            <li>Entrega máxima en 1 semana</li>
                         </ul>
                         <a href="#contacto">Quiero mi página ↗</a>
                     </article>
@@ -932,17 +710,17 @@
                             <li>La revisas con calma</li>
                             <li>Si te gusta, la pagas</li>
                         </ul>
-                        <a href="https://instagram.com/11d1or" target="_blank" rel="noopener">Hablemos por Instagram ↗</a>
+                        <a href="https://instagram.com/10120.77" target="_blank" rel="noopener">Hablemos por Instagram ↗</a>
                     </article>
                     <article class="plan">
                         <span class="eyebrow">Proceso propio</span>
                         <h3>Rápido, sin sacrificar intención.</h3>
-                        <span class="price">Procesos automatizados</span>
+                        <span class="price">Siempre informado</span>
                         <ul>
                             <li>Flujo de trabajo optimizado</li>
                             <li>Diseño pensado para tu rubro</li>
                             <li>Comunicación directa</li>
-                            <li>Una presencia lista para usar</li>
+                            <li>Te informo los detalles y el estado de tu página</li>
                         </ul>
                         <a href="#contacto">Empezar ahora ↗</a>
                     </article>
@@ -952,7 +730,7 @@
         <section id="faq">
             <div class="wrap">
                 <div class="section-head">
-                    <p class="eyebrow">Preguntas frecuentes / 05</p>
+                    <p class="eyebrow">Preguntas frecuentes / 04</p>
                     <h2>Dudas claras. Respuestas directas.</h2>
                 </div>
                 <div class="faq-list">
@@ -977,6 +755,15 @@
                     <article class="faq-item">
                         <div class="faq-q">
                             <span class="number">03 /</span>
+                            <h3>¿Voy a estar al tanto de cómo va mi página?</h3>
+                        </div>
+                        <div class="faq-a">
+                            <p>Sí. Siempre serás informado de los detalles de tu página y del estado de su desarrollo, para que sepas en qué va tu proyecto en todo momento.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <div class="faq-q">
+                            <span class="number">04 /</span>
                             <h3>¿Cómo funciona el tema del hosting y el dominio?</h3>
                         </div>
                         <div class="faq-a">
@@ -989,7 +776,7 @@
                     </article>
                     <article class="faq-item">
                         <div class="faq-q">
-                            <span class="number">04 /</span>
+                            <span class="number">05 /</span>
                             <h3>¿Voy a poder cambiar los precios, fotos o productos yo mismo después?</h3>
                         </div>
                         <div class="faq-a">
@@ -998,11 +785,20 @@
                     </article>
                     <article class="faq-item">
                         <div class="faq-q">
-                            <span class="number">05 /</span>
+                            <span class="number">06 /</span>
                             <h3>¿Cuánto tarda el proceso completo desde que te escribo?</h3>
                         </div>
                         <div class="faq-a">
-                            <p>Desde que definimos los detalles de tu negocio, el plazo de entrega es de máximo 2 días para que tengas tu sitio listo para funcionar.</p>
+                            <p>Desde que definimos los detalles de tu negocio, el plazo de entrega es de máximo 1 semana para que tengas tu sitio listo para funcionar.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <div class="faq-q">
+                            <span class="number">07 /</span>
+                            <h3>¿Puedo contactarte por WhatsApp?</h3>
+                        </div>
+                        <div class="faq-a">
+                            <p>Sí. Si deseas contactarte por WhatsApp, coméntamelo por el inbox (mensaje directo) de Instagram en <a class="contact-link" href="https://instagram.com/10120.77" target="_blank" rel="noopener">@10120.77</a> y coordinamos desde ahí.</p>
                         </div>
                     </article>
                 </div>
@@ -1011,7 +807,7 @@
         <section class="partners" id="conectores">
             <div class="wrap">
                 <div class="section-head">
-                    <p class="eyebrow">Únete al equipo / 06</p>
+                    <p class="eyebrow">Únete al equipo / 05</p>
                     <h2>Conectores d1or: presenta negocios y gana la mitad de cada web.</h2>
                 </div>
                 <div class="partners-grid">
@@ -1019,7 +815,7 @@
                         <span class="share-num">50%</span>
                         <p>De lo que pague cada cliente que traigas, la mitad es tuya.</p>
                         <span class="share-note">Ejemplo: una web de $20.000 CLP = $10.000 CLP para ti.</span>
-                        <a class="button invert" href="https://instagram.com/11d1or" target="_blank" rel="noopener">
+                        <a class="button invert" href="https://instagram.com/10120.77" target="_blank" rel="noopener">
                             Quiero ser conector <span>↗</span>
                         </a>
                     </div>
@@ -1042,7 +838,7 @@
                             <span class="number">03</span>
                             <div>
                                 <h3>Yo construyo la web</h3>
-                                <p>Diseño y desarrollo completos, con entrega máxima en 2 días. Tú no tienes que saber de programación.</p>
+                                <p>Diseño y desarrollo completos, con entrega máxima en 1 semana. Tú no tienes que saber de programación.</p>
                             </div>
                         </li>
                         <li>
@@ -1056,65 +852,19 @@
                 </div>
             </div>
         </section>
-        <section id="autorizados">
-            <div class="wrap">
-                <div class="section-head">
-                    <p class="eyebrow">Evita las estafas / 07</p>
-                    <h2>Evita las estafas: Representantes Autorizados</h2>
-                </div>
-                <div class="auth-grid">
-                    <div class="auth-warning">
-                        <p>Solo estas personas tienen permiso para hablar con tiendas y ofrecer los servicios de d1or.</p>
-                        <p><strong>Cualquier otra cuenta o persona que lo haga es una estafa.</strong> Si dudas, escríbeme directo por Instagram.</p>
-                    </div>
-                    <div>
-                        <ol class="auth-list">
-                            <li class="auth-item">
-                                <span class="number">01</span>
-                                <div>
-                                    <a class="auth-handle" href="https://instagram.com/11d1or" target="_blank" rel="noopener">@11d1or</a>
-                                    <span class="auth-role">Fundador</span>
-                                </div>
-                                <span class="auth-badge">Autorizado</span>
-                            </li>
-                            <li class="auth-item">
-                                <span class="number">02</span>
-                                <div>
-                                    <a class="auth-handle" href="https://instagram.com/marshisyy" target="_blank" rel="noopener">@marshisyy</a>
-                                    <span class="auth-role">Representante</span>
-                                </div>
-                                <span class="auth-badge">Autorizado</span>
-                            </li>
-                        </ol>
-                        <p class="auth-note">Lista oficial. Si una cuenta no aparece aquí, no representa a d1or.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="benjamin">
-            <div class="wrap about">
-                <div>
-                    <p class="eyebrow" style="margin:0 0 28px">Sobre el dueño / 08</p>
-                    <p>
-                        Hola, soy <em style="font-family:'Playfair Display',serif;font-weight:500">Benjamín</em>
-                        . Creo sitios con intención, no páginas de relleno.
-                    </p>
-                </div>
-                <p class="bio">Detrás de d1or development estoy yo. Trabajo de cerca con cada negocio para entender lo que lo hace diferente y convertirlo en una presencia digital simple, memorable y fácil de usar. La meta no es que tu sitio se vea “bonito”: es que dé confianza antes de la primera conversación.</p>
-            </div>
-        </section>
         <footer class="wrap contact" id="contacto">
-            <p class="eyebrow">Contacto / 09</p>
+            <p class="eyebrow">Contacto / 06</p>
             <h2>
                 ¿Tu negocio está listo para verse <em>en serio?</em>
             </h2>
-            <a class="button" href="https://instagram.com/11d1or" target="_blank" rel="noopener">
+            <a class="button" href="https://instagram.com/10120.77" target="_blank" rel="noopener">
                 Escríbeme por Instagram <span>↗</span>
             </a>
+            <span class="disclaimer">¿Prefieres WhatsApp? Coméntamelo por el inbox de Instagram y coordinamos por ahí.</span>
+            <span class="disclaimer"><strong>@10120.77</strong> es la única persona autorizada para la venta de los servicios de d1or.</span>
             <div class="contact-bottom">
                 <span>© 2026 d1or development</span>
-                <a class="contact-link" href="https://instagram.com/11d1or" target="_blank" rel="noopener">Instagram / @11d1or</a>
-                <span>Diseñado y desarrollado por Benjamín</span>
+                <a class="contact-link" href="https://instagram.com/10120.77" target="_blank" rel="noopener">Instagram / @10120.77</a>
             </div>
         </footer>
     </body>
